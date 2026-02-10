@@ -10,11 +10,9 @@ requisitos, defina o escopo e planeje um site institucional, aplicando os mesmos
 
 Etapa 1 - Definição do Escopo do Site Institucional
 
-Objetivo do site: disponibilizar uma visão geral sobre a cafeteria
+Objetivo do site: disponibilizar uma visão geral sobre a cafeteria.
 
-Público-alvo: 
-
-Adolescente e adultos
+Público-alvo: público em geral.
 
 Páginas da cafeteria definidas:
 
@@ -76,4 +74,3 @@ Conteúdo registrado:
 Escopo definido
 Requisitos levantados
 Estrutura técnica do projeto
-
