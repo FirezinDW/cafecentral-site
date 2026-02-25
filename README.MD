@@ -8,7 +8,7 @@ Objetivo da Situação de Aprendizagem - Café Central
 O objetivo desta Situação de Aprendizagem é possibilitar que o aluno analise de forma autônoma o contexto do cliente, levante
 requisitos, defina o escopo e planeje um site institucional, aplicando os mesmos procedimentos observados no projeto guiado.
 
-Etapa 1 - Definição do Escopo do Site Institucional
+Etapa 1 - Definição do Escopo do Site
 
 Objetivo do site: disponibilizar uma visão geral sobre a cafeteria.
 
