@@ -7,6 +7,21 @@ form.addEventListener("submit", async function(event) {
     const email = document.getElementById("Email").value;
     const mensagem = document.getElementById("Mensagem").value;
 
+    if (nome.length < 4) {
+        alert("O nome deve ter pelo menos 4 caracteres.");
+        return;
+    }
+
+    if (!validarEmail(email)) {
+        alert("Digite um email válido.");
+        return;
+    }
+
+    if (mensagem.length < 10) {
+        alert("A mensagem deve ter pelo menos 10 caracteres.");
+        return;
+    }
+
     const novaMensagem = {
         nome: nome,
         email: email,
