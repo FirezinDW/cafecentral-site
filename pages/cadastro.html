@@ -1,57 +1,65 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Cadastro</title>
+    <!-- Cabeça do Site-->
+    <head> 
         <meta charset="UTF-8">
+        <meta name="viewport" content="widht=device-width, initial-scale=1.0">
+        <meta name="description" content="A TechEduca oferece cursos de tecnologia e informática." >
         <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/auth.css">
+        <title>Cadastro</title>
     </head>
 
+    <!-- Corpo do Site -->
     <body>
         <header class="topo">
             <div class="logo">
-                <a href="../index.html"></a>
-                <img src="../img/cafe_central_logo_classic.png" width="90" height="90" style="display: block; margin: 0 auto" alt="">
+                <a href="../index.html">
+                    <img src="../img/cafe_central_logo_classic.png" width="120" height="120" style="display: block; margin: 0 auto" alt="">
+                </a>
             </div>
             <nav class="menu">
-                <a href="../Index.html">Início</a>
+                <a href="../index.html" class="ativo">Início</a>
                 <a href="sobre.html">Sobre</a>
+                <a href="cardapio.html">Cardápio</a>
                 <a href="contato.html">Contato</a>
             </nav>
         </header>
-    
-        <main class="container pagina-auth">
-            
+
+        <main class="container">
             <section class="bloco-auth">
-                <h1>Cadastro</h1>
+                <h2>Cadastro</h2>
+                <p class="texto-auth">Crie sua conta para acessar os cursos</p>
+                <form class="form-auth" id="formCadastro">
+                <label for="nome"> Nome: </label>
+                <input type= "text" required  id="nome" placeholder="Digite seu nome"> 
+                <br>
+                <label for="email">E-mail: </label>
+                <input type="email" required id="email" placeholder="Digite seu e-mail">
+                <br>
+                <label for="Senha">Senha: </label>
+                <input type="password" required id="senha" placeholder="Digite sua senha">
+                <br>
+                <label for="confirmaSenha">Confirmar Senha: </label>
+                <input type="password" required id="confirmaSenha" placeholder="Digite sua senha novamente">
+                <br>
+                <button type="submit" class="btn-primario">Cadastrar</button>
+                
 
-                <form class="form-auth" id="formLogin">
-                    
+                <p id="mensagemCadastro" class="mensagem-auth"></p>
+                <br>
+            <form action=""></form>
 
-                    <label for="nome">nome</label>
-                    <input type="name" id="nomecadastro" placeholder="Digite seu nome" required>
-
-                    <label for="Telefone">Telefone</label>
-                    <input type="telefone" id="telefonecadastro" placeholder="Digite seu Telefone" required>
-
-                    <label for="emailLogin">E-mail</label>
-                    <input type="email" id="emailcadastro" placeholder="Digite seu e-mail" required>
-
-                    <label for="senhaLogin">Senha</label>
-                    <input type="password" id="senhacadastro" placeholder="Digite sua senha" required>
-
-                    <button type="submit" class="btn-primario">Cadastrar</button>
-                    <button type="reset" class="btn-segundario">cancelar</button>
-
-                </form>
-
+            <p class="link-auth">
+                Já possui uma conta?<a href="../pages/login.html"><br>Fazer login</a>
+            </p>
             </section>
         </main>
-    
-        <footer class="rodape"> <!-- Rodapé reutilizado -->
-            <p>® 2026 Café Central. Todos os Direitos Reservados</p>
+        <footer class="rodape">
+            <p>® 2026 TechEduca. Todos os Direitos Reservados</p>
             <p><a href="contato.html">Entre em Contato</a></p>
         </footer>
 
-        <script src="../js/auth.js"></script>
+    <script src="../js/auth.js"></script>
     </body>
 </html>

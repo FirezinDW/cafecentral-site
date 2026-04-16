@@ -1,0 +1,20 @@
+[
+    {
+        "titulo":"Espresso",
+        "img":"../img/",
+        "desc":"Um shot concentrado e aromático do nosso blend especial, com crema perfeita. Ideal para os amantes do café puro.",
+        "preco":"R$3,00"
+    },
+    {
+        "titulo":"Latte Macchiato",
+        "img":"../img/",
+        "desc":"Leite vaporizado delicadamente manchado com um shot de espresso, criando camadas visíveis e um sabor suave e cremoso.",
+        "preco":"R$8,00"
+    },
+    {
+        "titulo":"Sanduíche de Queijo Quente",
+        "img":"../img/",
+        "desc":"Pão de forma tostado com queijo mussarela derretido. Simples e delicioso.",
+        "preco":"R$10,00"
+    }
+]

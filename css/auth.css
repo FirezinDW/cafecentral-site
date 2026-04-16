@@ -1,0 +1,42 @@
+/*=========================================================================================================== */
+/* ======= FORMULÁRIO DE LOGIN/CADASTRO ======= */
+
+.container {
+    padding: 10px 20px;
+}
+
+.container h3 {
+    font-size: 28px;
+    text-align: center;
+}
+
+.container form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container label {
+    font-weight: bold;
+}
+
+.container input,
+.container textarea {
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.container {
+    text-align: center;
+}
