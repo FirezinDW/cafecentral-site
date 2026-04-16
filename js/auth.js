@@ -110,7 +110,7 @@ if(formLogin){
 
             // sucesso -> redirecionar para página cursos.html
             if(resposta.ok){
-                window.location.href = "../pages/cursos.html";
+                window.location.href = "../pages/index.html";
             }
 
         }catch(error){
