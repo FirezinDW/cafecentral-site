@@ -5,16 +5,30 @@ body {
     padding: 0;
     color: #222;
     background-color: #745739;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
-/*=========================================================================================================== */
-header.topo {
+.hero{
+    color: #202427;
+    text-align: center;
+    text-indent: 485px;
+    margin: 200px;
+    margin-bottom: 4px;
+    font-size: 24px;
+}
+
+.hero2{
+    color: #e4ad76;
+    text-align: center;
+    text-indent: 590px;
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+header.topo{
    background-color: #ab886d;
    color: #ffff;
    padding: 20px;
+   
 }
 
 header.topo a { 
@@ -26,27 +40,32 @@ header.topo a {
     text-align: center;
 }
 
-.logo a, img {
+.logo a, img{
     display: flex;
     justify-content: center;
 }
 
-nav.menu {
+nav.menu{
     display: flex;
     justify-content: center;
 }
 
-nav.menu a {
+nav.menu a{
     color: #faf7f3;
-    margin: 20px 50px; /* Ajustei o margin para não ficar muito espaçado verticalmente */
+    margin: 50px;
     font-weight: bold;
     text-decoration: none;
+}
+
+/*==== CONTATO ====*/
+
+.contato{
+    padding: 20px 20;
 }
 /*=========================================================================================================== */
 /* ======= FORMULÁRIO DE CONTATO ======= */
 
 
-/*===========================================================================================================*/
 /*==== RODAPÉ ====*/
 footer {
     background-color: #202427;
@@ -54,24 +73,9 @@ footer {
     text-align: center;
     padding: 20px;
     font-size: 14px;
-    margin-top: auto; /* Mudei de 100% para 50px para o rodapé aparecer logo após o conteúdo */
+    margin-top: 100%;
 }
 
 footer a {
     color: #e4ad76;
-}
-
-/*===========================================================================================================*/
-/* Ajuste para Celular */
-@media (max-width: 768px) {
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .hero-imagem, .hero-texto {
-        text-align: center;
-    }
-    nav.menu a {
-        margin: 10px 15px;
-    }
 }
