@@ -1,68 +1,77 @@
 /* ======= CONFIGURAÇÕES GERAIS ======= */
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     color: #222;
     background-color: #745739;
-}
-.hero{
-    color: #202427;
-    text-align: center;
-    text-indent: 485px;
-    margin: 200px;
-    margin-bottom: 4px;
-    font-size: 24px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.hero2{
-    color: #e4ad76;
-    text-align: center;
-    text-indent: 590px;
-    font-size: 24px;
-     margin-bottom: 247px;
-}
-
-
-header.topo{
+/*=========================================================================================================== */
+header.topo {
    background-color: #ab886d;
    color: #ffff;
-   margin: 300;
-   padding: 65px;
-
+   padding: 20px;
 }
 
-header.topo a{ 
+header.topo a { 
     text-decoration: none;
-    text-align: center;
     font-size: 30px;
-    
 }
 
-/* Logo principal do site */
-.logo{
+.logo {
     text-align: center;
 }
 
-nav.menu a{
+.logo a, img {
+    display: flex;
+    justify-content: center;
+}
+
+nav.menu {
+    display: flex;
+    justify-content: center;
+}
+
+nav.menu a {
     color: #faf7f3;
-    margin: 100px;
+    margin: 20px 50px; /* Ajustei o margin para não ficar muito espaçado verticalmente */
     font-weight: bold;
     text-decoration: none;
-
 }
+/*=========================================================================================================== */
+/* ======= FORMULÁRIO DE CONTATO ======= */
 
+
+/*===========================================================================================================*/
 /*==== RODAPÉ ====*/
-footer{
+footer {
     background-color: #202427;
     color: #ffff;
     text-align: center;
     padding: 20px;
     font-size: 14px;
+    margin-top: auto; /* Mudei de 100% para 50px para o rodapé aparecer logo após o conteúdo */
 }
 
-footer a{
+footer a {
     color: #e4ad76;
 }
 
-/* ======= LAYOUT DO CABEÇALHO COM FLEXBOX ======= */
+/*===========================================================================================================*/
+/* Ajuste para Celular */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-imagem, .hero-texto {
+        text-align: center;
+    }
+    nav.menu a {
+        margin: 10px 15px;
+    }
+}

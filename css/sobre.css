@@ -1,0 +1,31 @@
+/* ======= SOBRE NOS ======= */
+.sobre {
+    width: 100%;             /* Ocupa toda a largura da página */
+    background-color: #745739; /* O marrom do seu fundo */
+    display: flex;           /* Ativa o Flexbox para alinhar o card */
+    justify-content: center; /* Centraliza o card horizontalmente (esquerda/direita) */
+    align-items: center;     /* Centraliza verticalmente se necessário */
+    padding: 60px 0;         /* Espaço em cima e embaixo para o card não "colar" no menu/rodapé */
+    box-sizing: border-box;  /* Garante que o padding não aumente a largura total */
+    text-align: center;
+}
+
+/* O Card centralizado e elegante */
+.card-sobre {
+    background-color: #da72114d; /* Fundo branco do card */
+    padding: 40px;             /* Espaço interno para o texto "respirar" */
+    width: 90%;                
+    max-width: 900px;          
+    border-radius: 20px;       
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3); 
+    text-align: center;        
+    margin: 0 auto;            /* Reforço para garantir a centralização */
+}
+
+/* Estilo do texto dentro do card */
+.card-sobre p {
+    color: #f1b36191;  /* ou essa dfb016 ,333333*/           
+    font-size: 1.2em;          /* Tamanho de fonte confortável */
+    line-height: 1.8;          
+    margin-bottom: 20px;       
+}

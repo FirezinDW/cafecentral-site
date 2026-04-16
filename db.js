@@ -1,5 +1,5 @@
-require("dotenv").config() // carrega as variáveis do .env para process.env
-const mysql = require("mysql2/promise") // importa o MySQL com suporte a async/await
+require("dotenv").config() 
+const mysql = require("mysql2/promise") 
 
 const pool = mysql.createPool({
     host: process.env.DB_HOST,
@@ -7,10 +7,10 @@ const pool = mysql.createPool({
     user: process.env.DB_USER,
     password:process.env.DB_PASSWORD,
     database:process.env.DB_NAME,
-    ssl: {rejectUnauthorized: false}, //habilita a conexão segura com o Aiven via SSL
-    waitForConnections: true, // se todas as coenexões tiverem ocupadas, aguarda na fila
-    connectionLimit: 10 // máximo de conexões simultâneas
+    ssl: {rejectUnauthorized: false}, 
+    waitForConnections: true, 
+    connectionLimit: 10 
 });
 
 
-module.exports = pool; // exporta o pool para ser usado no server.js
+module.exports = pool; 

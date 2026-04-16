@@ -1,55 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Login</title>
+    <!-- Cabeça do Site-->
+    <head> 
         <meta charset="UTF-8">
+        <meta name="viewport" content="widht=device-width, initial-scale=1.0">
+        <meta name="description" content="A TechEduca oferece cursos de tecnologia e informática." >
         <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/auth.css">
+        <title>Login</title>
     </head>
 
+    <!-- Corpo do Site -->
     <body>
         <header class="topo">
             <div class="logo">
-                <a href="../index.html"></a>
-                <img src="../img/cafe_central_logo_classic.png" width="90" height="90" style="display: block; margin: 0 auto" alt="">
+                <a href="../index.html">
+                    <img src="../img/cafe_central_logo_classic.png" width="120" height="120" style="display: block; margin: 0 auto" alt="">
+                </a>
             </div>
             <nav class="menu">
-                <a href="../Index.html">Início</a>
+                <a href="../index.html" class="ativo">Início</a>
                 <a href="sobre.html">Sobre</a>
                 <a href="contato.html">Contato</a>
             </nav>
         </header>
-    
+
         <main class="container pagina-auth">
-            
             <section class="bloco-auth">
-                <h1>Login</h1>
+                <h2>Login</h2>
+                <p class="texto-auth">Acesse sua conta para acessar os cursos</p>
+            <form class="form-auth" id="formlogin">
 
-                <form class="form-auth" id="formLogin">
-                    
-                    <label for="emailLogin">E-mail</label>
-                    <input type="email" id="emailLogin" placeholder="Digite seu e-mail" required>
+                <label for="email">E-mail: </label>
+                <input type="email" required id="emailLogin" placeholder="Digite seu e-mail">
+                <br><br>
+                <label for="Senha">Senha: </label>
+                <input type="password" required id="senhaLogin" placeholder="Digite sua senha">
+                <br><br>
 
-                    <label for="senhaLogin">Senha</label>
-                    <input type="password" id="senhaLogin" placeholder="Digite sua senha" required>
+                <button type="submit" class="btn-primario">Login </button>
+        
+                <p id="mensagemlogin" class="mensagem-auth"></p>
+                <br>
+            <form action=""></form>
 
-                    <button type="submit" class="btn-primario">Login</button>
-                    <button type="reset" class="btn-segundario">cancelar</button>
+            <p class="link-auth">
+                Ainda Nao possui uma conta? <a href="../pages/cadastro.html"><br>Fazer Cadastro</a>
 
-                    <p id="mensagemLogin" class="mensagem-auth"></p>
-                </form>
-
-                <p class="link-auth">
-                <a href="../pages/cadastro.html">Não possui cadastro? Cadastre-se</a>
-                <a href="../pages/recpurarsenha.html">Esqueceu sua senha?</a>
-                </p>
+            </p>
             </section>
         </main>
-    
-        <footer class="rodape"> <!-- Rodapé reutilizado -->
-            <p>® 2026 Café Central. Todos os Direitos Reservados</p>
+        <footer class="rodape">
+            <p>® 2026 TechEduca. Todos os Direitos Reservados</p>
             <p><a href="contato.html">Entre em Contato</a></p>
         </footer>
 
-        <script src="../js/auth.js"></script>
+    <script src="../js/auth.js"></script>
     </body>
 </html>
