@@ -26,8 +26,8 @@ const app = express();
 
 // 7. Cria uma lista de instância de conexões
 const listOrigins = [
-    "http://localhost:5500", // ambiente local (live server)
-    "http://127.0.0.1:5500", // variação de localhost
+    "http://localhost:5501", // ambiente local (live server)
+    "http://127.0.0.1:5501", // variação de localhost
     "https://FirezinDW.github.io" // dominio do frontend em produção
 ]
 
@@ -52,7 +52,7 @@ const sessionConfig = {
         // não salva a sessões se não houver mudança
     saveUninitialized: false, 
         // não cria sessão para usuários não logados
-    name: "techeduca.sid", 
+    name: "cafecentral-1-site.sid", 
         // nome personalizado do cookie da sessão
     cookie: {
         httpOnly : true, // bloqueia o acesso via JavaScript
@@ -79,7 +79,7 @@ app.use(session(sessionConfig)) // configura a sessão no servidor
 */
 // 1. Define a rota POST "/mensagem"
 // Quando o formulário enviar os dados para /mensagem, essa função roda
-app.post("/mensagem", (req,res) => {
+app.post("/mensagem", async (req,res) => {
     try{
      //7. req.body contém os dados enviados pelo formulário
         //(nome,email, mensagem)
@@ -92,16 +92,17 @@ app.post("/mensagem", (req,res) => {
     }
 
     // 9 - faz o comando SQL de insercao
-    pool.execute("INSERT INTO tb_Mensagem(nome,email,mensagem) VALUES(?,?,?)",
+    await pool.execute("INSERT INTO tb_mensagem(nome_mensagem,email_mensagem,mensagem_mensagem) VALUES(?,?,?)",
             [nome,email,mensagem]);
 
     // 10 - O servidor envia uma mensagem de volta no formato JSON
-    res.status(201).json({mensagem: "mensagem enviada com sucesso"});
+    res.status(201).json({mensagem: "Mensagem enviada com sucesso"});
 
     //11. Envia uma mensagem de volta para o navegador
     res.send("Mensagem recebida com sucesso!");
     } catch(erro){
         console.error(error);
+        return res.status(500).json({ mensagem: "Erro interno no servidor" });
     }
 });
 
@@ -121,7 +122,7 @@ app.post("/cadastro", async (req,res) => {
 
         // Crio um array[rows] e guardo dentro o resultado do select
         const [rows] = await pool.execute(  //consulta no banco
-            "SELECT id FROM tb_usuario WHERE email=?",[email] 
+            "SELECT id_usuario FROM tb_usuario WHERE email=?",[email] 
                 //busca se o e-mail existe no banco e retorna o id
         );
 
@@ -135,7 +136,7 @@ app.post("/cadastro", async (req,res) => {
 
         // Inserir os dados no banco de dados
         await pool.execute( // executa o INSERT no banco
-            "INSERT INTO tb_usuario(nome,email,senha) VALUES(?,?,?)",
+            "INSERT INTO tb_usuario(nome_usuario,email_usuario,senha_usuario) VALUES(?,?,?)",
                         [nome,email,senhaHash] // substitui os ? pelos valores reais
         );
         // retorna 201 (criado com sucesso)
@@ -162,7 +163,7 @@ app.post("/login", async (req,res) => {
 
         // Crio um array[rows] e guardo dentro o resultado do select
         const [rows] = await pool.execute(  //consulta no banco
-            "SELECT id, nome, email, senha FROM tb_usuario WHERE email=?",[email] 
+            "SELECT id_usuario, nome_usuario, email_usuario, senha_usuario FROM tb_usuario WHERE email=?",[email] 
                 //busca se o e-mail existe no banco e retorna o id
         );
 

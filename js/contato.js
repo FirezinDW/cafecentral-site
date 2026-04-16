@@ -14,7 +14,8 @@ form.addEventListener("submit", async function(event){
     event.preventDefault(); 
 
     // 4. Lê e salva o que o usuário digitou em cada campo
-    const nome = document.getElementById("nome").value;
+    // Alterado para 'name' e 'message' para bater com seu HTML
+    const nome = document.getElementById("nome").value; 
     const email = document.getElementById("email").value;
     const mensagem = document.getElementById("mensagem").value;
 
